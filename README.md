@@ -1,4 +1,4 @@
-# nvm its back
+# Updated it with better player
 
 <details>
 <summary>Homepage</summary>
