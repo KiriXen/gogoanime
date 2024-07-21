@@ -55,7 +55,7 @@
 
 ## Acknowledgements
 
-[anime-api](https://github.com/kirixenyt/anime-api) The api used for the need of this website. 
+[anime-api](https://github.com/KiriXen/gogo-api) The api used for the need of this website. 
 
 ## Requirements
 --> Php environment (use .htaccess must be enabled in localhost) or Directly Upload the code on php supported hosting (No editing Required Just Upload and Enjoy)
@@ -65,7 +65,7 @@ php/info.php
 <?php 
 $base_url = "//{$_SERVER['SERVER_NAME']}";
 $website_name = "GogoAnime"; // The name u want for the website
-$apiLink = ""; // Go here https://github.com/KirixenYT/anime-api and host one, and paste the link without the '/' at the end
+$apiLink = ""; // Go here https://github.com/KiriXen/gogo-api and host one, and paste the link without the '/' at the end
 $consumet = ""; // host ur own consumet api from here `https://github.com/consumet/api.consumet.org` and paste the api here without the `/` at the end
 if (date("d") > 15){
     $apiLink = ""; // same for here
@@ -83,7 +83,7 @@ You need to have `php` installed on your pc for following the intructions
 
 First download the repository using
 ```
-git clone https://github.com/KirixenYT/Gogoanime
+git clone https://github.com/KiriXen/gogoanime
 ```
 
 Now start the production build of the site using
