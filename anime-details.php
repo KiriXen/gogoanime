@@ -9,10 +9,6 @@ $fetchDetails = json_decode($json, true);
 $episodeArray = $fetchDetails['episode_id'];
 
 
-$json1 = file_get_contents("$consumet/anime/gogoanime/info/$url");
-$fetchdetailss = json_decode($json1, true);
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,14 +67,19 @@ $fetchdetailss = json_decode($json1, true);
                   <!---<p><a class="bookmark bookmark-manage" href="javascript:void(0)"><i></i>Click to manage book marks</a>
                   </p> --->
                   <p class="type"><span>Type: </span><?=$fetchDetails['type']?></p>
-                  <p class="type"><span>Plot Summary: </span><?=$fetchdetailss['description']?></p>
-                  <p class="type"><span>Genre: </span> <?php echo implode(', ', $fetchdetailss['genres'])?></p>
-                  <p class="type"><span>Released: </span><?=$fetchdetailss['releaseDate']?></p>
+                  <p class="type"><span>Plot Summary: </span><?=$fetchDetails['synopsis']?></p>
+                  <p class="type"><span>Genre: </span> 
+<?php 
+    $genresArray = explode(',', $fetchDetails['genres']); 
+    $genresArray = array_filter(array_map('trim', $genresArray)); 
+    echo implode(', ', $genresArray);
+?>
+</p>                  <p class="type"><span>Released: </span><?=$fetchDetails['released']?></p>
                   <p class="type"><span>Episodes: </span><?php echo count($fetchDetails['episode_id'])?></p>
                   <p class="type"><span>Status: </span>
-                    <a href="<?php if ($fetchdetailss['status'] == 'Completed') {echo "/status/completed"; }   else  {echo "/status/ongoing";} ?>" title="<?=$fetchdetailss['status']?> Anime"><?=$fetchdetailss['status']?></a>
+                    <a href="<?php if ($fetchDetails['status'] == 'Completed') {echo "/status/completed"; }   else  {echo "/status/ongoing";} ?>" title="<?=$fetchDetails['status']?> Anime"><?=$fetchDetails['status']?></a>
                   </p>
-                  <p class="type"><span>Other name: </span><?=$fetchdetailss['otherName']?></p>
+                  <p class="type"><span>Other name: </span><?=$fetchDetails['othername']?></p>
                 </div>
                 <div class="clr"></div>
                 <div class="anime_info_episodes">
