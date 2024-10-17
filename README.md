@@ -42,7 +42,7 @@
 </p>
 </details>
 
-[![Join our Discord server!](https://invidget.switchblade.xyz/BgTWqFnEss)](https://discord.gg/BgTWqFnEss)
+[![Join our Discord server!](https://invidget.switchblade.xyz/VsPXjNRcbw)](https://discord.gg/VsPXjNRcbw)
 <hr/>
 
 
