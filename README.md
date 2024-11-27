@@ -1,4 +1,3 @@
-# Updated it with better player
 
 <details>
 <summary>Homepage</summary>
@@ -63,12 +62,12 @@
 php/info.php
 ```
 <?php 
-$base_url = "//{$_SERVER['SERVER_NAME']}";
+$base_url = "//{$_SERVER['SERVER_NAME']}"; // if on local then after the `}` add a slash and `/name_of_the_folder`
 $website_name = "GogoAnime"; // The name u want for the website
-$apiLink = ""; // Go here https://github.com/KiriXen/gogo-api and host one, and paste the link without the '/' at the end
-$consumet = ""; // host ur own consumet api from here `https://github.com/consumet/api.consumet.org` and paste the api here without the `/` at the end
+$apiLink = ""; // api without the '/' at the end
+$consumet = ""; // host ur own consumet api from here `https://github.com/consumet/api.consumet.org` and paste the api link here without the `/` at the end
 if (date("d") > 15){
-    $apiLink = ""; // same for here
+    $apiLink = ""; // api without the '/' at the end
 }
 ?>
 ```
